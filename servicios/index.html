@@ -644,6 +644,11 @@ if (mov.tipo === 'ingreso') dbCaja += dif; else dbCaja -= dif;
 mov.concepto = conceptoFinal;
 mov.monto = monto;
 if (cat) mov.categoria = cat;
+// Si es una venta (tiene horas), recalcular neto y salario/hora con el nuevo ingreso
+if (mov.esTrabajo && mov.horas) {
+mov.neto = monto - (mov.costeMat || 0);
+mov.salarioHora = mov.neto / mov.horas;
+}
 mostrarToast('✅ Movimiento actualizado.');
 } else {
 if (tipo === 'ingreso') dbCaja += monto; else dbCaja -= monto;
@@ -668,6 +673,18 @@ El saldo se ajustará automáticamente.</p>
 function confirmarEliminarMovimiento(id) {
 const mov = dbMovimientos.find(m => m.id === id);
 if (mov.tipo === 'ingreso') dbCaja -= mov.monto; else dbCaja += mov.monto;
+// Si era una venta con materiales, devolverlos al almacén
+if (mov.consumos && mov.consumos.length > 0) {
+for (const c of mov.consumos) {
+const item = dbInventario.find(i => i.id === c.id);
+if (item) {
+item.qty += c.qty;
+item.costeTotal += c.qty * item.costeUnitario;
+}
+}
+guardarDatos('inv');
+renderizarInventario();
+}
 dbMovimientos = dbMovimientos.filter(m => m.id !== id);
 guardarDatos('caja'); guardarDatos('movs');
 cerrarModal();
@@ -869,7 +886,7 @@ const gananciaNeta = ingreso - costeMateriales;
 const salarioHora = gananciaNeta / horas;
 dbCaja += ingreso;
 registrarMovimiento('ingreso', 'Venta: ' + nombre, ingreso, true,
-{ horas, costeMat: costeMateriales, neto: gananciaNeta, salarioHora });
+{ horas, costeMat: costeMateriales, neto: gananciaNeta, salarioHora, consumos });
 guardarDatos('caja'); guardarDatos('inv');
 
 document.getElementById('esp-ingreso').innerText = ingreso.toFixed(2);
