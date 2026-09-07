@@ -110,7 +110,7 @@ header .header-sub { font-size: 0.7rem; opacity: 0.55; font-weight: 600; letter-
 .fila-mat input { flex: 1; padding: 10px; border: 2px solid var(--gris-borde); border-radius: 8px; font-family: 'Nunito', sans-serif; font-size: 0.9rem; }
 
 /* ── MODAL BOTTOM SHEET ── */
-.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 200; align-items: flex-end; justify-content: center; }
+.modal-overlay { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0,0,0,0.55); z-index: 200; align-items: flex-end; justify-content: center; }
 .modal-overlay.abierto { display: flex; }
 .modal-caja { background: var(--blanco); width: 100%; max-width: 480px; border-radius: 20px 20px 0 0; padding: 24px 20px 36px; animation: subirModal 0.28s ease-out; max-height: 92vh; overflow-y: auto; }
 @keyframes subirModal { from { transform: translateY(100%); } to { transform: translateY(0); } }
@@ -151,7 +151,7 @@ header .header-sub { font-size: 0.7rem; opacity: 0.55; font-weight: 600; letter-
 /* ── BIENVENIDA ── */
 #pantalla-bienvenida {
 display: none;
-position: fixed; inset: 0;
+position: fixed; top: 0; right: 0; bottom: 0; left: 0;
 background: var(--gris-oscuro);
 z-index: 500;
 overflow-y: auto;
