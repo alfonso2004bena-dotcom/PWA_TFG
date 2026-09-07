@@ -649,6 +649,17 @@ if (mov.esTrabajo && mov.horas) {
 mov.neto = monto - (mov.costeMat || 0);
 mov.salarioHora = mov.neto / mov.horas;
 }
+// Si es una compra de material, ajustar el coste en el almacén con la diferencia de precio
+if (mov.compraMaterial) {
+const item = dbInventario.find(i => i.id === mov.compraMaterial.id);
+if (item) {
+item.costeTotal += dif;
+if (item.qty > 0) item.costeUnitario = item.costeTotal / item.qty;
+guardarDatos('inv');
+renderizarInventario();
+}
+mov.compraMaterial.coste = monto;
+}
 mostrarToast('✅ Movimiento actualizado.');
 } else {
 if (tipo === 'ingreso') dbCaja += monto; else dbCaja -= monto;
@@ -680,6 +691,22 @@ const item = dbInventario.find(i => i.id === c.id);
 if (item) {
 item.qty += c.qty;
 item.costeTotal += c.qty * item.costeUnitario;
+}
+}
+guardarDatos('inv');
+renderizarInventario();
+}
+// Si era una compra de material, restar del almacén lo que esa compra añadió
+if (mov.compraMaterial) {
+const item = dbInventario.find(i => i.id === mov.compraMaterial.id);
+if (item) {
+item.qty -= mov.compraMaterial.qty;
+item.costeTotal -= mov.compraMaterial.coste;
+if (item.qty <= 0.0001) {
+// Si no queda cantidad de esa compra, eliminar el material del almacén
+dbInventario = dbInventario.filter(i => i.id !== item.id);
+} else {
+item.costeUnitario = item.costeTotal / item.qty;
 }
 }
 guardarDatos('inv');
@@ -747,14 +774,18 @@ const total = parseFloat(document.getElementById('inv-total').value);
 if (!nombre || !(qty > 0) || !(total > 0)) { mostrarToast('⚠️ Rellena todos los campos.'); return; }
 
 dbCaja -= total;
-registrarMovimiento('gasto', 'Compra material: ' + nombre, total, false, { categoria: 'material' });
 const item = dbInventario.find(i => i.nombre.toLowerCase() === nombre.toLowerCase());
+let itemId;
 if (item) {
 item.costeTotal += total; item.qty += qty;
 item.costeUnitario = item.costeTotal / item.qty;
+itemId = item.id;
 } else {
-dbInventario.push({ id: Date.now(), nombre, qty, unidad, costeTotal: total, costeUnitario: total/qty });
+itemId = Date.now();
+dbInventario.push({ id: itemId, nombre, qty, unidad, costeTotal: total, costeUnitario: total/qty });
 }
+registrarMovimiento('gasto', 'Compra material: ' + nombre, total, false,
+{ categoria: 'material', compraMaterial: { id: itemId, qty: qty, coste: total } });
 guardarDatos('inv'); guardarDatos('caja');
 document.getElementById('inv-nombre').value = '';
 document.getElementById('inv-qty').value = '';
