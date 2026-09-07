@@ -30,32 +30,32 @@
 --sombra: 0 2px 12px rgba(0,0,0,0.08);
 --radio: 12px;
 }
- 
+
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
- 
+
 body { font-family: 'Nunito', sans-serif; margin: 0; background: var(--fondo); color: var(--gris-oscuro); padding-bottom: 72px; }
- 
+
 .app { max-width: 480px; margin: 0 auto; background: var(--fondo); min-height: 100vh; }
- 
+
 /* ── HEADER ── */
 header { background: var(--gris-oscuro); color: white; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 50; }
 header h1 { margin: 0; font-size: 1.1rem; font-weight: 900; }
 header .header-sub { font-size: 0.7rem; opacity: 0.55; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
- 
+
 /* ── NAV INFERIOR ── */
 .nav { position: fixed; bottom: 0; width: 100%; max-width: 480px; background: var(--blanco); display: flex; border-top: 1px solid var(--gris-borde); z-index: 100; box-shadow: 0 -4px 16px rgba(0,0,0,0.06); }
 .nav-btn { flex: 1; text-align: center; padding: 10px 0 8px; font-size: 0.72rem; font-weight: 700; color: #9aa5b1; cursor: pointer; transition: color 0.2s, background 0.2s; user-select: none; }
 .nav-btn .ico { display: block; font-size: 1.3rem; margin-bottom: 2px; }
 .nav-btn.activo { color: var(--azul); background: var(--azul-claro); }
- 
+
 /* ── VISTAS ── */
 .vista { display: none; padding: 16px; }
 .vista.activa { display: block; }
- 
+
 /* ── CARDS ── */
 .card { background: var(--blanco); border-radius: var(--radio); padding: 16px; margin-bottom: 14px; box-shadow: var(--sombra); border: 1px solid var(--gris-borde); }
 .card-titulo { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--gris-medio); margin: 0 0 10px 0; }
- 
+
 /* ── HERO ── */
 .hero { background: linear-gradient(135deg, var(--gris-oscuro) 0%, #2d3f54 100%); color: white; border-radius: var(--radio); padding: 20px; margin-bottom: 14px; box-shadow: 0 4px 20px rgba(30,42,56,0.3); }
 .hero .label { font-size: 0.75rem; opacity: 0.6; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
@@ -65,7 +65,7 @@ header .header-sub { font-size: 0.7rem; opacity: 0.55; font-weight: 600; letter-
 .hero .mini-stat .mini-val { font-size: 1.1rem; font-weight: 900; margin-top: 2px; }
 .hero .mini-stat .mini-val.pos { color: #6be8a4; }
 .hero .mini-stat .mini-val.neg { color: #ff8080; }
- 
+
 /* ── BOTONES ── */
 .btn { display: block; width: 100%; padding: 14px; border: none; border-radius: var(--radio); font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 700; cursor: pointer; transition: transform 0.1s, opacity 0.15s; text-align: center; margin-top: 10px; }
 .btn:active { transform: scale(0.98); opacity: 0.85; }
@@ -78,7 +78,7 @@ header .header-sub { font-size: 0.7rem; opacity: 0.55; font-weight: 600; letter-
 .btn-sm { padding: 9px 14px; font-size: 0.85rem; width: auto; display: inline-block; margin-top: 6px; }
 .btn-peligro { background: transparent; border: 1.5px solid var(--rojo); color: var(--rojo); padding: 7px 10px; font-size: 0.82rem; width: auto; display: inline-block; margin-top: 0; border-radius: 8px; font-weight: 700; cursor: pointer; font-family: 'Nunito', sans-serif; }
 .btn-editar { background: transparent; border: 1.5px solid var(--azul); color: var(--azul); padding: 7px 10px; font-size: 0.82rem; width: auto; display: inline-block; margin-top: 0; border-radius: 8px; font-weight: 700; cursor: pointer; font-family: 'Nunito', sans-serif; }
- 
+
 /* ── FORMULARIOS ── */
 .campo { margin-bottom: 14px; }
 .campo label { display: block; font-weight: 700; font-size: 0.9rem; color: var(--gris-oscuro); margin-bottom: 5px; }
@@ -89,7 +89,7 @@ header .header-sub { font-size: 0.7rem; opacity: 0.55; font-weight: 600; letter-
 .campo input.input-rojo { border-color: var(--rojo); background: var(--rojo-claro); }
 .fila-par { display: flex; gap: 10px; }
 .fila-par .campo { flex: 1; margin-bottom: 0; }
- 
+
 /* ── ITEMS LISTA ── */
 .item { background: var(--blanco); border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; border-left: 4px solid var(--gris-borde); box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
 .item.ingreso { border-left-color: var(--verde); }
@@ -103,12 +103,12 @@ header .header-sub { font-size: 0.7rem; opacity: 0.55; font-weight: 600; letter-
 .item-acciones { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
 .texto-verde { color: var(--verde); }
 .texto-rojo { color: var(--rojo); }
- 
+
 /* ── FILA MATERIAL ── */
 .fila-mat { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
 .fila-mat select { flex: 2; padding: 10px; border: 2px solid var(--gris-borde); border-radius: 8px; font-family: 'Nunito', sans-serif; font-size: 0.9rem; }
 .fila-mat input { flex: 1; padding: 10px; border: 2px solid var(--gris-borde); border-radius: 8px; font-family: 'Nunito', sans-serif; font-size: 0.9rem; }
- 
+
 /* ── MODAL BOTTOM SHEET ── */
 .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 200; align-items: flex-end; justify-content: center; }
 .modal-overlay.abierto { display: flex; }
@@ -116,7 +116,7 @@ header .header-sub { font-size: 0.7rem; opacity: 0.55; font-weight: 600; letter-
 @keyframes subirModal { from { transform: translateY(100%); } to { transform: translateY(0); } }
 .modal-titulo { font-size: 1.15rem; font-weight: 900; margin: 0 0 16px; color: var(--gris-oscuro); }
 .modal-cerrar { float: right; background: var(--gris-borde); border: none; border-radius: 50%; width: 30px; height: 30px; font-size: 1rem; cursor: pointer; font-weight: 700; line-height: 30px; text-align: center; }
- 
+
 /* ── ESPEJO ── */
 .espejo { display: none; background: linear-gradient(135deg, var(--gris-oscuro), #2d3f54); color: white; border-radius: var(--radio); padding: 24px 20px; margin-bottom: 14px; text-align: center; animation: fadeIn 0.4s ease; }
 .espejo.activo { display: block; }
@@ -127,13 +127,13 @@ header .header-sub { font-size: 0.7rem; opacity: 0.55; font-weight: 600; letter-
 .espejo .salario-esp { font-size: 2.4rem; font-weight: 900; margin: 14px 0 4px; }
 .espejo .salario-esp.pos { color: #6be8a4; }
 .espejo .salario-esp.neg { color: #ff8080; }
- 
+
 /* ── BADGE ── */
 .badge { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; }
 .badge-ok { background: var(--verde-claro); color: var(--verde); }
 .badge-alerta { background: var(--naranja-claro); color: var(--naranja); }
 .badge-agotado { background: var(--rojo-claro); color: var(--rojo); }
- 
+
 /* ── MISC ── */
 .seccion-titulo { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: var(--gris-medio); margin: 20px 0 10px; }
 .acciones-rapidas { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
@@ -147,7 +147,7 @@ header .header-sub { font-size: 0.7rem; opacity: 0.55; font-weight: 600; letter-
 .vacio { text-align: center; padding: 32px 16px; color: var(--gris-medio); }
 .vacio .ico-vacio { font-size: 2.5rem; display: block; margin-bottom: 8px; }
 .vacio p { font-size: 0.9rem; margin: 0; }
- 
+
 /* ── BIENVENIDA ── */
 #pantalla-bienvenida {
 display: none;
@@ -165,7 +165,7 @@ margin: 0 auto;
 .bienvenida-titulo { font-size: 1.6rem; font-weight: 900; color: white; text-align: center; margin: 0 0 6px; }
 .bienvenida-sub { font-size: 0.88rem; color: rgba(255,255,255,0.55); text-align: center; margin: 0 0 36px; }
 .bienvenida-pregunta { font-size: 0.95rem; font-weight: 700; color: rgba(255,255,255,0.8); margin-bottom: 14px; text-align: center; }
- 
+
 .perfil-card {
 background: rgba(255,255,255,0.06);
 border: 2px solid rgba(255,255,255,0.1);
@@ -185,7 +185,7 @@ gap: 14px;
 .perfil-info .perfil-desc { font-size: 0.78rem; color: rgba(255,255,255,0.5); line-height: 1.4; }
 .perfil-check { margin-left: auto; font-size: 1.3rem; opacity: 0; transition: opacity 0.2s; flex-shrink: 0; }
 .perfil-card.seleccionado .perfil-check { opacity: 1; }
- 
+
 .btn-empezar {
 display: block; width: 100%; padding: 16px;
 background: var(--verde); color: white; border: none;
@@ -194,7 +194,7 @@ font-size: 1.05rem; font-weight: 900; cursor: pointer;
 margin-top: 24px; transition: opacity 0.2s;
 }
 .btn-empezar:disabled { opacity: 0.35; cursor: not-allowed; }
- 
+
 /* ── BOTÓN AJUSTES EN HEADER ── */
 .btn-ajustes {
 background: rgba(255,255,255,0.12);
@@ -206,7 +206,7 @@ align-items: center; justify-content: center;
 flex-shrink: 0;
 }
 .btn-ajustes:active { background: rgba(255,255,255,0.22); }
- 
+
 /* ── PANEL AJUSTES ── */
 .ajustes-perfil-fila {
 display: flex; align-items: center; gap: 12px;
@@ -224,14 +224,14 @@ transition: border-color 0.2s;
 </style>
 </head>
 <body>
- 
+
 <!-- ══ PANTALLA BIENVENIDA ══ -->
 <div id="pantalla-bienvenida">
 <div class="bienvenida-logo">💰</div>
 <h1 class="bienvenida-titulo">Mi Negocio</h1>
 <p class="bienvenida-sub">Tu herramienta de gestión sencilla</p>
 <p class="bienvenida-pregunta">¿A qué te dedicas?</p>
- 
+
 <div class="perfil-card" onclick="seleccionarPerfilBienvenida('artesana')" id="pw-artesana">
 <span class="perfil-ico">🧶</span>
 <div class="perfil-info">
@@ -240,7 +240,7 @@ transition: border-color 0.2s;
 </div>
 <span class="perfil-check">✅</span>
 </div>
- 
+
 <div class="perfil-card" onclick="seleccionarPerfilBienvenida('servicios')" id="pw-servicios">
 <span class="perfil-ico">💆</span>
 <div class="perfil-info">
@@ -249,7 +249,7 @@ transition: border-color 0.2s;
 </div>
 <span class="perfil-check">✅</span>
 </div>
- 
+
 <div class="perfil-card" onclick="seleccionarPerfilBienvenida('comida')" id="pw-comida">
 <span class="perfil-ico">🌮</span>
 <div class="perfil-info">
@@ -258,20 +258,20 @@ transition: border-color 0.2s;
 </div>
 <span class="perfil-check">✅</span>
 </div>
- 
+
 <button class="btn-empezar" id="btn-empezar" disabled onclick="confirmarPerfil()">Empezar →</button>
 </div>
- 
+
 <div class="app">
- 
+
 <header>
 <div>
 <div class="header-sub">Mi Negocio</div>
 <h1 id="app-titulo">📊 Mi Caja</h1>
 </div>
- 
+
 </header>
- 
+
 <!-- ══ VISTA: CAJA ══ -->
 <div id="vista-caja" class="vista activa">
 <div class="hero">
@@ -305,7 +305,7 @@ transition: border-color 0.2s;
 <div class="seccion-titulo">Últimos Movimientos</div>
 <div id="lista-movimientos"></div>
 </div>
- 
+
 <!-- ══ VISTA: ALMACÉN ══ -->
 <div id="vista-inventario" class="vista">
 <div class="card">
@@ -339,7 +339,7 @@ transition: border-color 0.2s;
 <div class="seccion-titulo">Mi Almacén</div>
 <div id="lista-inventario"></div>
 </div>
- 
+
 <!-- ══ VISTA: VENDER ══ -->
 <div id="vista-vender" class="vista">
 <div id="form-venta">
@@ -378,7 +378,7 @@ transition: border-color 0.2s;
 <button class="btn btn-gris" style="margin-top:16px;color:var(--gris-oscuro);" onclick="cerrarEspejo()">Entendido, volver a la Caja →</button>
 </div>
 </div>
- 
+
 <!-- ══ VISTA: MIS PRODUCTOS ══ -->
 <div id="vista-productos" class="vista">
 <div class="card" style="background:var(--naranja-claro);border-color:#f5c87a;">
@@ -387,7 +387,7 @@ transition: border-color 0.2s;
 </div>
 <div id="lista-recetas"></div>
 </div>
- 
+
 <nav class="nav">
 <div class="nav-btn activo" id="nav-caja" onclick="navegar('vista-caja','📊 Mi Caja')"><span class="ico">📊</span>Caja</div>
 <div class="nav-btn" id="nav-inventario" onclick="navegar('vista-inventario','📦 Mi Almacén')"><span class="ico">📦</span>Almacén</div>
@@ -395,7 +395,7 @@ transition: border-color 0.2s;
 <div class="nav-btn" id="nav-productos" onclick="navegar('vista-productos','⭐ Mis Productos')"><span class="ico">⭐</span>Productos</div>
 </nav>
 </div>
- 
+
 <!-- ══ MODAL GENÉRICO ══ -->
 <div id="modal-overlay" class="modal-overlay" onclick="cerrarModalSiOverlay(event)">
 <div class="modal-caja">
@@ -404,7 +404,7 @@ transition: border-color 0.2s;
 <div id="modal-contenido"></div>
 </div>
 </div>
- 
+
 <script>
 // ══════════════════════════
 // BASE DE DATOS
@@ -414,7 +414,7 @@ let dbInventario = JSON.parse(localStorage.getItem('pwa_v9_inv')) || [];
 let dbMovimientos = JSON.parse(localStorage.getItem('pwa_v9_movs')) || [];
 let dbRecetas = JSON.parse(localStorage.getItem('pwa_v9_recetas')) || [];
 let perfilActual = localStorage.getItem('pwa_v9_perfil') || null;
- 
+
 function guardarDatos(key) {
 if (key === 'caja') localStorage.setItem('pwa_v9_caja', dbCaja);
 if (key === 'inv') localStorage.setItem('pwa_v9_inv', JSON.stringify(dbInventario));
@@ -422,7 +422,7 @@ if (key === 'movs') localStorage.setItem('pwa_v9_movs', JSON.stringify(dbMovimie
 if (key === 'recetas') localStorage.setItem('pwa_v9_recetas', JSON.stringify(dbRecetas));
 if (key === 'perfil') localStorage.setItem('pwa_v9_perfil', perfilActual);
 }
- 
+
 // ══════════════════════════
 // PERFILES
 // artesana → Caja + Almacén + Vender + Productos
@@ -434,23 +434,23 @@ artesana: { nombre: 'Artesana / Manufactura', ico: '🧶', modulos: ['caja','inv
 servicios: { nombre: 'Servicios', ico: '💆', modulos: ['caja','vender'] },
 comida: { nombre: 'Comida / Venta rápida', ico: '🌮', modulos: ['caja','inventario','vender','productos'] },
 };
- 
+
 function aplicarPerfil(perfil) {
 perfilActual = perfil;
 const cfg = PERFILES[perfil];
- 
+
 // Mostrar/ocultar pestañas de navegación
 ['caja','inventario','vender','productos'].forEach(mod => {
 const btn = document.getElementById('nav-' + mod);
 if (btn) btn.style.display = cfg.modulos.includes(mod) ? '' : 'none';
 });
- 
+
 // Si el perfil de servicios no tiene almacén, ocultar la sección de materiales en el form de venta
 const secMateriales = document.getElementById('seccion-materiales');
 if (secMateriales) secMateriales.style.display = cfg.modulos.includes('inventario') ? '' : 'none';
 const btnReceta = document.getElementById('btn-guardar-receta');
 if (btnReceta) btnReceta.style.display = cfg.modulos.includes('productos') ? '' : 'none';
- 
+
 // Si estamos en una pestaña que ya no existe para este perfil, ir a caja
 const vistaActiva = document.querySelector('.vista.activa');
 if (vistaActiva) {
@@ -458,17 +458,17 @@ const claveVista = vistaActiva.id.replace('vista-', '');
 if (!cfg.modulos.includes(claveVista)) navegar('vista-caja', '📊 Mi Caja');
 }
 }
- 
+
 // ── BIENVENIDA ──
 let perfilSeleccionadoBienvenida = null;
- 
+
 function seleccionarPerfilBienvenida(perfil) {
 perfilSeleccionadoBienvenida = perfil;
 document.querySelectorAll('.perfil-card').forEach(c => c.classList.remove('seleccionado'));
 document.getElementById('pw-' + perfil).classList.add('seleccionado');
 document.getElementById('btn-empezar').disabled = false;
 }
- 
+
 function confirmarPerfil() {
 if (!perfilSeleccionadoBienvenida) return;
 perfilActual = perfilSeleccionadoBienvenida;
@@ -476,7 +476,7 @@ guardarDatos('perfil');
 document.getElementById('pantalla-bienvenida').classList.remove('activa');
 aplicarPerfil(perfilActual);
 }
- 
+
 // ── AJUSTES ──
 function abrirAjustes() {
 const cfg = PERFILES[perfilActual] || {};
@@ -486,7 +486,7 @@ const filas = Object.entries(PERFILES).map(([key, p]) => `
 <span class="p-nom">${p.nombre}</span>
 <span class="p-chk">✅</span>
 </div>`).join('');
- 
+
 abrirModal('⚙️ Ajustes', `
 <p style="font-size:0.85rem;color:var(--gris-medio);margin:0 0 14px;">Perfil actual: <strong>${cfg.ico || ''} ${cfg.nombre || ''}</strong></p>
 <p style="font-weight:700;font-size:0.9rem;margin:0 0 10px;">Cambiar perfil:</p>
@@ -495,7 +495,7 @@ ${filas}
 <button class="btn btn-gris" onclick="cerrarModal()" style="margin-top:12px;">Cerrar</button>
 `);
 }
- 
+
 function cambiarPerfilDesdeAjustes(nuevoPerfil) {
 perfilActual = nuevoPerfil;
 guardarDatos('perfil');
@@ -503,14 +503,14 @@ cerrarModal();
 aplicarPerfil(perfilActual);
 mostrarToast(`✅ Perfil cambiado a ${PERFILES[nuevoPerfil].ico} ${PERFILES[nuevoPerfil].nombre}`);
 }
- 
+
 function iniciarApp() {
 aplicarPerfil('artesana');
 renderizarCaja();
 renderizarInventario();
 renderizarRecetas();
 }
- 
+
 // ══════════════════════════
 // NAVEGACIÓN
 // ══════════════════════════
@@ -526,7 +526,7 @@ if (idDestino === 'vista-inventario') renderizarInventario();
 if (idDestino === 'vista-productos') renderizarRecetas();
 if (idDestino === 'vista-vender') resetearFormVenta();
 }
- 
+
 // ══════════════════════════
 // MODAL GENÉRICO
 // ══════════════════════════
@@ -537,7 +537,7 @@ document.getElementById('modal-overlay').classList.add('abierto');
 }
 function cerrarModal() { document.getElementById('modal-overlay').classList.remove('abierto'); }
 function cerrarModalSiOverlay(e) { if (e.target === document.getElementById('modal-overlay')) cerrarModal(); }
- 
+
 // ══════════════════════════
 // CAJA
 // ══════════════════════════
@@ -551,7 +551,7 @@ if (m.esTrabajo) { totalGanTrab += (m.neto || 0); totalHoras += (m.horas || 0); 
 document.getElementById('ui-total-ingreso').innerText = '$' + totalI.toFixed(2);
 document.getElementById('ui-total-gasto').innerText = '$' + totalG.toFixed(2);
 document.getElementById('ui-media-hora').innerText = '$' + (totalHoras > 0 ? totalGanTrab / totalHoras : 0).toFixed(2);
- 
+
 const cont = document.getElementById('lista-movimientos');
 cont.innerHTML = '';
 if (dbMovimientos.length === 0) {
@@ -585,21 +585,21 @@ ${extra}
 </div>`;
 });
 }
- 
+
 function abrirModalMovimiento(tipo, idEditar = null) {
 const mov = idEditar ? dbMovimientos.find(m => m.id === idEditar) : null;
 const esEdicion = !!mov;
 const tituloModal = tipo === 'ingreso'
 ? (esEdicion ? '✏️ Editar Ingreso' : '➕ Añadir Dinero')
 : (esEdicion ? '✏️ Editar Gasto' : '🧾 Registrar Gasto');
- 
+
 const valorConcepto = mov ? mov.concepto.replace(/ \[.*\]$/, '') : '';
 const valorMonto = mov ? mov.monto : '';
 const categorias = ['transporte','suministros','alquiler','alimentacion','salud','educacion','otro'];
 const nombresCat = { transporte:'🚌 Transporte', suministros:'💡 Luz / Agua / Gas', alquiler:'🏠 Alquiler',
 alimentacion:'🍽️ Alimentación familia', salud:'💊 Salud', educacion:'📚 Educación hijos', otro:'📋 Otro gasto' };
 const catActual = mov ? (mov.categoria || 'otro') : 'transporte';
- 
+
 const selectCat = tipo === 'gasto' ? `
 <div class="campo" style="margin-top:10px;">
 <label>Tipo de gasto</label>
@@ -607,7 +607,7 @@ const selectCat = tipo === 'gasto' ? `
 ${categorias.map(c => `<option value="${c}" ${c===catActual?'selected':''}>${nombresCat[c]}</option>`).join('')}
 </select>
 </div>` : '';
- 
+
 abrirModal(tituloModal, `
 <div class="campo">
 <label>${tipo==='ingreso' ? '¿De dónde viene?' : '¿En qué gastaste?'}</label>
@@ -626,7 +626,7 @@ ${esEdicion ? '✅ Guardar cambios' : (tipo==='ingreso' ? '✅ Añadir a la Caja
 `);
 setTimeout(() => { const el = document.getElementById('m-concepto'); if(el) el.focus(); }, 300);
 }
- 
+
 function confirmarMovimiento(tipo, idEditar) {
 const concepto = document.getElementById('m-concepto').value.trim();
 const monto = parseFloat(document.getElementById('m-monto').value);
@@ -636,7 +636,7 @@ if (!concepto || isNaN(monto) || monto <= 0) {
 document.getElementById('m-monto').style.borderColor = 'var(--rojo)'; return;
 }
 const conceptoFinal = cat ? `${concepto} [${traducirCategoria(cat)}]` : concepto;
- 
+
 if (idEditar && idEditar !== 'null') {
 const mov = dbMovimientos.find(m => m.id === idEditar);
 const dif = monto - mov.monto;
@@ -649,6 +649,17 @@ if (mov.esTrabajo && mov.horas) {
 mov.neto = monto - (mov.costeMat || 0);
 mov.salarioHora = mov.neto / mov.horas;
 }
+// Si es una compra de material, ajustar el coste en el almacén con la diferencia de precio
+if (mov.compraMaterial) {
+const item = dbInventario.find(i => i.id === mov.compraMaterial.id);
+if (item) {
+item.costeTotal += dif;
+if (item.qty > 0) item.costeUnitario = item.costeTotal / item.qty;
+guardarDatos('inv');
+renderizarInventario();
+}
+mov.compraMaterial.coste = monto;
+}
 mostrarToast('✅ Movimiento actualizado.');
 } else {
 if (tipo === 'ingreso') dbCaja += monto; else dbCaja -= monto;
@@ -658,7 +669,7 @@ guardarDatos('caja'); guardarDatos('movs');
 cerrarModal();
 renderizarCaja();
 }
- 
+
 function eliminarMovimiento(id) {
 const mov = dbMovimientos.find(m => m.id === id);
 if (!mov) return;
@@ -669,7 +680,7 @@ El saldo se ajustará automáticamente.</p>
 <button class="btn btn-gris" onclick="cerrarModal()" style="margin-top:8px;">Cancelar</button>
 `);
 }
- 
+
 function confirmarEliminarMovimiento(id) {
 const mov = dbMovimientos.find(m => m.id === id);
 if (mov.tipo === 'ingreso') dbCaja -= mov.monto; else dbCaja += mov.monto;
@@ -685,13 +696,29 @@ item.costeTotal += c.qty * item.costeUnitario;
 guardarDatos('inv');
 renderizarInventario();
 }
+// Si era una compra de material, restar del almacén lo que esa compra añadió
+if (mov.compraMaterial) {
+const item = dbInventario.find(i => i.id === mov.compraMaterial.id);
+if (item) {
+item.qty -= mov.compraMaterial.qty;
+item.costeTotal -= mov.compraMaterial.coste;
+if (item.qty <= 0.0001) {
+// Si no queda cantidad de esa compra, eliminar el material del almacén
+dbInventario = dbInventario.filter(i => i.id !== item.id);
+} else {
+item.costeUnitario = item.costeTotal / item.qty;
+}
+}
+guardarDatos('inv');
+renderizarInventario();
+}
 dbMovimientos = dbMovimientos.filter(m => m.id !== id);
 guardarDatos('caja'); guardarDatos('movs');
 cerrarModal();
 renderizarCaja();
 mostrarToast('🗑 Movimiento eliminado y saldo ajustado.');
 }
- 
+
 function registrarMovimiento(tipo, concepto, monto, esTrabajo, detalles = {}) {
 dbMovimientos.push({
 id: Date.now(),
@@ -700,12 +727,12 @@ tipo, concepto, monto, esTrabajo, ...detalles
 });
 guardarDatos('movs');
 }
- 
+
 function traducirCategoria(cat) {
 return { transporte:'Transporte', suministros:'Luz/Agua/Gas', alquiler:'Alquiler',
 alimentacion:'Alimentación', salud:'Salud', educacion:'Educación', otro:'Otro' }[cat] || cat;
 }
- 
+
 // ══════════════════════════
 // ALMACÉN
 // ══════════════════════════
@@ -738,23 +765,27 @@ cont.innerHTML += `
 </div>`;
 });
 }
- 
+
 function comprarMaterial() {
 const nombre = document.getElementById('inv-nombre').value.trim();
 const qty = parseFloat(document.getElementById('inv-qty').value);
 const unidad = document.getElementById('inv-unidad').value;
 const total = parseFloat(document.getElementById('inv-total').value);
 if (!nombre || !(qty > 0) || !(total > 0)) { mostrarToast('⚠️ Rellena todos los campos.'); return; }
- 
+
 dbCaja -= total;
-registrarMovimiento('gasto', 'Compra material: ' + nombre, total, false, { categoria: 'material' });
 const item = dbInventario.find(i => i.nombre.toLowerCase() === nombre.toLowerCase());
+let itemId;
 if (item) {
 item.costeTotal += total; item.qty += qty;
 item.costeUnitario = item.costeTotal / item.qty;
+itemId = item.id;
 } else {
-dbInventario.push({ id: Date.now(), nombre, qty, unidad, costeTotal: total, costeUnitario: total/qty });
+itemId = Date.now();
+dbInventario.push({ id: itemId, nombre, qty, unidad, costeTotal: total, costeUnitario: total/qty });
 }
+registrarMovimiento('gasto', 'Compra material: ' + nombre, total, false,
+{ categoria: 'material', compraMaterial: { id: itemId, qty: qty, coste: total } });
 guardarDatos('inv'); guardarDatos('caja');
 document.getElementById('inv-nombre').value = '';
 document.getElementById('inv-qty').value = '';
@@ -762,7 +793,7 @@ document.getElementById('inv-total').value = '';
 renderizarInventario();
 mostrarToast('✅ Material añadido al almacén.');
 }
- 
+
 function editarMaterial(id) {
 const item = dbInventario.find(i => i.id === id);
 if (!item) return;
@@ -792,7 +823,7 @@ ${unidades.map(u=>`<option value="${u}" ${u===item.unidad?'selected':''}>${u}</o
 <button class="btn btn-gris" onclick="cerrarModal()" style="margin-top:8px;">Cancelar</button>
 `);
 }
- 
+
 function guardarEdicionMaterial(id) {
 const item = dbInventario.find(i => i.id === id);
 const nombre = document.getElementById('e-nombre').value.trim();
@@ -805,7 +836,7 @@ item.costeUnitario = coste; item.costeTotal = coste * qty;
 guardarDatos('inv'); cerrarModal(); renderizarInventario();
 mostrarToast('✅ Material actualizado.');
 }
- 
+
 function eliminarMaterial(id) {
 const item = dbInventario.find(i => i.id === id);
 abrirModal('🗑 Borrar material', `
@@ -814,13 +845,13 @@ abrirModal('🗑 Borrar material', `
 <button class="btn btn-gris" onclick="cerrarModal()" style="margin-top:8px;">Cancelar</button>
 `);
 }
- 
+
 function confirmarEliminarMaterial(id) {
 dbInventario = dbInventario.filter(i => i.id !== id);
 guardarDatos('inv'); cerrarModal(); renderizarInventario();
 mostrarToast('🗑 Material eliminado.');
 }
- 
+
 // ══════════════════════════
 // VENTAS
 // ══════════════════════════
@@ -835,7 +866,7 @@ const btn = document.getElementById('btn-guardar-receta');
 btn.innerText = '⭐ Guardar como Producto Estándar';
 btn.onclick = guardarComoReceta;
 }
- 
+
 function añadirFilaMaterial(idSeleccionado='', qtyIndicada='') {
 const disponibles = dbInventario.filter(i => i.qty > 0);
 if (disponibles.length === 0) { mostrarToast('⚠️ No hay materiales en el almacén.'); return; }
@@ -851,7 +882,7 @@ div.innerHTML = `
 <button class="btn-peligro" onclick="this.parentElement.remove()">✕</button>`;
 document.getElementById('contenedor-materiales').appendChild(div);
 }
- 
+
 function obtenerMaterialesForm() {
 const consumos = [];
 document.querySelectorAll('.fila-mat').forEach(f => {
@@ -861,7 +892,7 @@ if (id && qty > 0) consumos.push({ id, qty });
 });
 return consumos;
 }
- 
+
 function calcularTrabajo() {
 const nombre = document.getElementById('trab-nombre').value.trim();
 const ingreso = parseFloat(document.getElementById('trab-ingreso').value);
@@ -888,7 +919,7 @@ dbCaja += ingreso;
 registrarMovimiento('ingreso', 'Venta: ' + nombre, ingreso, true,
 { horas, costeMat: costeMateriales, neto: gananciaNeta, salarioHora, consumos });
 guardarDatos('caja'); guardarDatos('inv');
- 
+
 document.getElementById('esp-ingreso').innerText = ingreso.toFixed(2);
 document.getElementById('esp-coste').innerText = costeMateriales.toFixed(2);
 document.getElementById('esp-neto').innerText = gananciaNeta.toFixed(2);
@@ -898,9 +929,9 @@ document.getElementById('esp-salario-div').className = 'salario-esp ' + (salario
 document.getElementById('form-venta').style.display = 'none';
 document.getElementById('espejo-resultado').classList.add('activo');
 }
- 
+
 function cerrarEspejo() { navegar('vista-caja', '📊 Mi Caja'); }
- 
+
 // ══════════════════════════
 // MIS PRODUCTOS
 // ══════════════════════════
@@ -914,7 +945,7 @@ if (existente) { existente.horas = horas; existente.materiales = consumos; mostr
 else { dbRecetas.push({ id: Date.now(), nombre, horas, materiales: consumos }); mostrarToast('⭐ Producto guardado.'); }
 guardarDatos('recetas'); renderizarRecetas();
 }
- 
+
 function renderizarRecetas() {
 const cont = document.getElementById('lista-recetas');
 cont.innerHTML = '';
@@ -944,7 +975,7 @@ cont.innerHTML += `
 </div>`;
 });
 }
- 
+
 function cargarReceta(id) {
 const r = dbRecetas.find(x => x.id === id);
 navegar('vista-vender', '💸 Registrar Venta');
@@ -955,7 +986,7 @@ document.getElementById('contenedor-materiales').innerHTML = '';
 r.materiales.forEach(mat => añadirFilaMaterial(mat.id, mat.qty));
 document.getElementById('trab-ingreso').focus();
 }
- 
+
 function editarReceta(id) {
 const r = dbRecetas.find(x => x.id === id);
 navegar('vista-vender', '✏️ Editar Producto');
@@ -972,7 +1003,7 @@ navegar('vista-productos', '⭐ Mis Productos');
 };
 mostrarToast('✏️ Edita los datos y pulsa "Actualizar Producto".');
 }
- 
+
 function eliminarReceta(id) {
 const r = dbRecetas.find(x => x.id === id);
 abrirModal('🗑 Borrar producto', `
@@ -981,13 +1012,13 @@ abrirModal('🗑 Borrar producto', `
 <button class="btn btn-gris" onclick="cerrarModal()" style="margin-top:8px;">Cancelar</button>
 `);
 }
- 
+
 function confirmarEliminarReceta(id) {
 dbRecetas = dbRecetas.filter(r => r.id !== id);
 guardarDatos('recetas'); cerrarModal(); renderizarRecetas();
 mostrarToast('🗑 Producto eliminado.');
 }
- 
+
 // ══════════════════════════
 // TOAST
 // ══════════════════════════
@@ -1007,7 +1038,7 @@ t.innerText = msg; t.style.opacity = '1';
 clearTimeout(toastTimer);
 toastTimer = setTimeout(() => { t.style.opacity = '0'; }, 2800);
 }
- 
+
 iniciarApp();
 </script>
 <script>
